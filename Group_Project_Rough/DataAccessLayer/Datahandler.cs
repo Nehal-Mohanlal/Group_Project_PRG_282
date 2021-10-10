@@ -112,6 +112,35 @@ namespace Group_Project_Rough.DataAccessLayer
 
         }
 
+        public string updateModule(int ID, string description, string link)
+        {
+            SqlConnection Sconn = new SqlConnection(ConnectionString);
+            string qry = "Update Modules SET ModuleDescription = '" + description + "', ModLink='" + link + "' Where ModuleCode = '"+ID+"'";
+
+            try
+            {
+                Sconn.Open();
+                SqlCommand scommand = new SqlCommand(qry, Sconn);
+                scommand.ExecuteNonQuery(); 
+
+            }
+            catch (SystemException e)
+            {
+
+                return e.Message; 
+
+            }
+            finally
+            {
+                Sconn.Close(); 
+            }
+            return "Updated Successfully"; 
+
+
+
+
+        }
+
 
 
 
