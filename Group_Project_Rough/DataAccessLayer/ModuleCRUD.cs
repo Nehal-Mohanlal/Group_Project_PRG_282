@@ -9,9 +9,9 @@ using System.Data.SqlClient;
 
 namespace Group_Project_Rough.DataAccessLayer
 {
-    class Datahandler
+    class ModuleCRUD
     {
-        static string ConnectionString = @"Data Source=DESKTOP-1CTOP33;Initial Catalog=StudentInformation;Integrated Security=True;"; 
+        static string ConnectionString = @"Data Source=(local);Initial Catalog=StudentInformation;Integrated Security=True;"; 
 
         ////////////////////// Student Module CRUD operations /////////////////////////////////////////////////
        
@@ -36,7 +36,7 @@ namespace Group_Project_Rough.DataAccessLayer
 
         }
 
-        public string InsertModules(int Mcode, string Mname, string Mdescription , string Mlink)
+        public string InsertModules(string Mcode, string Mname, string Mdescription , string Mlink)
         {
             SqlConnection Sconn = new SqlConnection(ConnectionString);
             string qry = "Insert into Modules(ModuleCode,ModuleName,ModuleDescription,ModLink)" +
@@ -61,7 +61,7 @@ namespace Group_Project_Rough.DataAccessLayer
             return "Successfully inserted a new module"; 
         }
 
-        public string DeleteModules(int Mid)
+        public string DeleteModules(string Mid)
         {
             SqlConnection Sconn = new SqlConnection(ConnectionString);
             string DelQuery = "Delete From Modules where ModuleCode = '"+Mid+"'";
@@ -86,10 +86,10 @@ namespace Group_Project_Rough.DataAccessLayer
 
         }
 
-        public string searchModule(string ModuleName)
+        public string searchModule(string ModCode)
         {
             SqlConnection Sconn = new SqlConnection(ConnectionString);
-            string qry = "Select * From Modules Where ModuleName='"+ModuleName+"'";
+            string qry = "Select * From Modules Where ModuleName='"+ModCode+"'";
 
             try
             {
@@ -112,7 +112,7 @@ namespace Group_Project_Rough.DataAccessLayer
 
         }
 
-        public string updateModule(int ID, string description, string link)
+        public string updateModule(string ID, string description, string link)
         {
             SqlConnection Sconn = new SqlConnection(ConnectionString);
             string qry = "Update Modules SET ModuleDescription = '" + description + "', ModLink='" + link + "' Where ModuleCode = '"+ID+"'";
