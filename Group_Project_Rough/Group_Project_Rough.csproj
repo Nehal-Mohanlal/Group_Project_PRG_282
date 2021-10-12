@@ -67,11 +67,23 @@
     <Compile Include="PresentationLayer\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\Modules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Modules.Designer.cs">
+      <DependentUpon>Modules.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\StudentInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\StudentInfor.Designer.cs">
+      <DependentUpon>StudentInfor.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Welcome.cs">
       <SubType>Form</SubType>
@@ -87,8 +99,14 @@
     <EmbeddedResource Include="PresentationLayer\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Modules.resx">
+      <DependentUpon>Modules.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\StudentInfor.resx">
+      <DependentUpon>StudentInfor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
