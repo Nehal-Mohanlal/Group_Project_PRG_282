@@ -11,6 +11,7 @@ using System.IO;
 
 
 
+
 namespace Group_Project_Rough.DataAccessLayer
 {
     class StudentInformationCRUD
@@ -30,6 +31,7 @@ namespace Group_Project_Rough.DataAccessLayer
                 SqlDataAdapter DA = new SqlDataAdapter(qry, ConnectionString);
                 DA.Fill(DT);
             }
+           
             catch (Exception e)
             {
 

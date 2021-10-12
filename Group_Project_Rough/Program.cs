@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Group_Project_Rough.PresentationLayer;
 
 namespace Group_Project_Rough
 {
@@ -16,7 +17,7 @@ namespace Group_Project_Rough
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Welcome() );
         }
     }
 }
