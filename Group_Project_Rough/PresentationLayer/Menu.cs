@@ -16,5 +16,24 @@ namespace Group_Project_Rough.PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentInfor Si = new StudentInfor();
+            Si.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Modules m = new Modules();
+            m.Show();
+            this.Hide();
+        }
     }
 }
