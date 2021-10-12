@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLogicLayer\ModuleOp.cs" />
+    <Compile Include="BussinessLogicLayer\StudentOp.cs" />
     <Compile Include="DataAccessLayer\FileHandler.cs" />
     <Compile Include="DataAccessLayer\ModuleCRUD.cs" />
     <Compile Include="DataAccessLayer\StudentInformationCRUD.cs" />
@@ -133,8 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BussinessLogicLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
